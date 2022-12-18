@@ -1,6 +1,6 @@
-# NextJS package.json "exports" issue repro:
+# Node package.json "exports" issue repro:
 
-### To demonstrate that this Next's module resolution works as expected when the `valid-cjs-module` uses the package.json "main" field to define its export:
+While Node's behavior around package.json files that only define a `main` is unchanged by whether or not the module is a relative import or a `node_modules` import, the behavior around the `exports` field changes depending on where the module is located!
 
 ```sh
 git clone https://github.com/qrohlf/next-exports-repro.git
